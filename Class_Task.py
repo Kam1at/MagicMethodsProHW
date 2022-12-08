@@ -28,11 +28,18 @@ class Task:
         return bool(len(self.content))
 
 
+
+
+
+
 todo_list = TodoList()
 todo_list[0] = Task('Сдать домашку')
-todo_list[1] = Task('Выпить кофе')
+todo_list[1] = Task('кофе')
+todo_list[2] = Task('Выпить')
+todo_list[3] = Task('Выпить кофе')
+todo_list[4] = Task('Выпе')
+todo_list[5] = Task('итьфе')
+# print(todo_list)
 
-print(next(todo_list))
-# Сдать домашку (создано 2022-12-08 12:34:33)
-print(next(todo_list))
-# Выпить кофе (создано 2022-12-08 12:34:33)
+for item in todo_list:
+    print(item)
