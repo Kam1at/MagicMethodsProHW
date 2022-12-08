@@ -1,4 +1,5 @@
 import datetime
+from Class_TodoList import TodoList
 
 class Task:
 
@@ -28,16 +29,18 @@ class Task:
 
 
 
-todo_list = []
 
-todo_list.append(Task('Сделать домашку'))
-todo_list.append(Task(''))
-todo_list.append(Task('Сделать домашку'))
-todo_list.append(Task(''))
 
-non_empty_tasks = [item for item in todo_list if item]
-print(non_empty_tasks)
-# [Сделать домашку (создано 2022-12-08 12:21:16), Сделать домашку (создано 2022-12-08 12:21:16)]
 
-print(len([item for item in todo_list if not item]))
-# 2
+todo_list = TodoList()
+todo_list[0] = Task('Сдать домашку')
+todo_list[1] = Task('Выпить кофе')
+print(todo_list)
+# [Сдать домашку (создано 2022-12-08 12:34:33), Выпить кофе (создано 2022-12-08 12:34:33)]
+
+print(todo_list[0])
+# Сдать домашку (создано 2022-12-08 12:34:33)
+
+del todo_list[0]
+print(todo_list)
+# [Выпить кофе (создано 2022-12-08 12:34:33)]
